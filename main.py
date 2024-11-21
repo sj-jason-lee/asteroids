@@ -6,6 +6,8 @@ from constants import *
 
 def main():
     pygame.init()
+    clock = pygame.time.Clock()
+    dt = 0
 
     print("Starting asteroids!")
     print(f"Screen width: {SCREEN_WIDTH}")
@@ -20,6 +22,9 @@ def main():
       
       screen.fill("black")
       pygame.display.flip()
+      
+      # limit fps to 60
+      dt = clock.tick(60)
 
 if __name__ == "__main__":
     main()
