@@ -24,8 +24,6 @@ def main():
     Player.containers = (updatable, drawable)
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
-   
-
     dt = 0
 
     while True:
@@ -34,7 +32,7 @@ def main():
           return
       
       for obj in updatable:
-         obj.update(dt)
+        obj.update(dt)
       
       for asteroid in asteroids:
         if asteroid.collides_with(player):
